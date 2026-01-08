@@ -40,6 +40,46 @@
                     $("#street").css({"color": "black"});
                 }
 
+                if($("#street2").val().length === 0){
+                    $("#street2").css({"background-color": "red"});
+                    $("#street2E").css({"display": "block"});
+                    $("#street").css({"color": "white"});
+                }else{
+                    $("#street").css({"background-color": "white"});
+                    $("#street2E").css({"display": "none"});
+                    $("#street2").css({"color": "black"});
+                }
+
+                if($("#city").val().length === 0){
+                    $("#city").css({"background-color": "red"});
+                    $("#cityE").css({"display": "block"});
+                    $("#city").css({"color": "white"});
+                }else{
+                    $("#city").css({"background-color": "white"});
+                    $("#cityE").css({"display": "none"});
+                    $("#city").css({"color": "black"});
+                }
+
+                if($("#zip").val().length === 0){
+                    $("#zip").css({"background-color": "red"});
+                    $("#zipE").css({"display": "block"});
+                    $("#zip").css({"color": "white"});
+                }else{
+                    $("#zip").css({"background-color": "white"});
+                    $("#zipE").css({"display": "none"});
+                    $("#zip").css({"color": "black"});
+                }
+
+                if($("#dob").val().length === 0){
+                    $("#dob").css({"background-color": "red"});
+                    $("#dobE").css({"display": "block"});
+                    $("#dob").css({"color": "white"});
+                }else{
+                    $("#dob").css({"background-color": "white"});
+                    $("#dobE").css({"display": "none"});
+                    $("#dob").css({"color": "black"});
+                }
+
                 // Phone needs to match the filter
                 var phone_filter = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
                 if(!phone_filter.test($("#phone").val())){
@@ -110,9 +150,13 @@
 
     <label for="street2">Address 2</label>
     <input type="text" name="street2" id="street2" /><br />
+    <div id="street2E" style="display:none">Please enter your second street address (optional).</div>
+    <br />
 
     <label for="city">City</label>
     <input type="text" name="city" id="city" />
+    <div id="cityE" style="display:none">Please enter your city.</div>
+    <br />
     <label for="state">State</label>
     <select name="state" id="state">
         <option value="AL">Alabama</option>
@@ -169,6 +213,8 @@
     </select>
     <label for="zip">Zip</label>
     <input type="text" name="city" id="zip" /><br />
+    <div id="zipE" style="display:none">Please enter your zip code.</div>
+    <br />
 
     <label for="phone">Phone</label>
     <input type="text" name="phone" id="phone" placeholder="123-123-1234" /><br />
@@ -180,6 +226,8 @@
 
     <label for="dob">DOB</label>
     <input type="text" name="dob" id="dob" /><br />
+    <div id="dobE" style="display:none">Please enter your Date Of Birth.</div>
+    <br />
 
     <label for="username">Username</label>
     <input type="text" name="username" id="username" /><br />
